@@ -1,0 +1,265 @@
+.navbar {
+    background-color: rgb(116, 107, 173);
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-bars {
+    margin-left: 2rem;
+    background: none;
+}
+
+.menu-bars img {
+    cursor: pointer;
+    height: 1.6rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.brand img {
+    width: 2.5rem;
+    border: none;
+    margin: 0;
+}
+
+.brand .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-direction: column;
+}
+
+.brand .logo h1 {
+    margin: 0;
+}
+
+.brand .logo img {
+    width: 3rem;
+    border: none;
+    margin: 0;
+}
+
+.notify.active {
+    background-color: #333;
+    height: 15vh;
+    width: 180px;
+    position: fixed;
+    right: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.notify.active::after {
+    content: '< No Message >';
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.notify-icon {
+    margin-right: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    animation: move 1.3s linear infinite alternate;
+}
+
+.nav-menu {
+    background-color: rgb(91, 83, 145);
+    width: 300px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 1s ;
+}
+
+.nav-menu.active {
+    left: 0;
+    transition: 0.4s;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 55px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #e4e4e4;
+    font-size: 1.2rem;
+    font-weight: 300;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    border-radius: 6px;
+}
+
+.nav-item a:hover {
+    background-color: sandybrown;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.navbar-toggle {
+    background-color: slateblue;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-close {
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 0;
+}
+
+.menu-close img {
+    cursor: pointer;
+    height: 1.6rem;
+}
+
+span {
+    margin-left: 16px;
+}
+
+
+
+
+
+
+@keyframes move {
+    0% {
+      transform: scale(0.9);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+}
+
+
+
+@media screen and (max-width: 698px) {
+    .nav-menu {
+        width: 250px;
+    }
+
+    .menu-bars img {
+        height: 1.2rem;
+    }
+
+    .menu-close img {
+        height: 1.2rem;
+    }
+
+    .menu-close h1 {
+        font-size: 1.2rem;
+    }
+
+    .brand img {
+        width: 1.5rem;
+        border: none;
+        margin: 0;
+    }
+
+    .brand .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .brand .logo img {
+        width: 2rem;
+    }
+
+    .notify-icon {
+        margin-right: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .notify.active {
+        height: 10vh;
+        width: 130px;
+    }
+
+    .notify.active::after {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .menu-close h1 {
+        font-size: 1.1rem;
+    }
+
+    .menu-bars img {
+        height: 1.1rem;
+    }
+
+    .menu-close img {
+        height: 1.1rem;
+    }
+
+    .brand img {
+        width: 1.3rem;
+    }
+
+    .brand .logo h1 {
+        font-size: 1.1rem;
+    }
+
+    .brand .logo img {
+        width: 1.8rem;
+    }
+
+    .notify-icon {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav-item {
+        height: 50px;
+    }
+
+    .nav-item a {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-item {
+        height: 45px;
+    }
+
+    .nav-item a {
+        font-size: 1rem;
+    }
+}
